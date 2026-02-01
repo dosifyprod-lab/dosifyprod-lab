@@ -3,37 +3,194 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Батутный №1</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+<meta name="description" content="Батутный центр №1 — прыжки, веселье и эмоции для всей семьи! Прыгай выше — живи ярче! 🌟">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#000000">
+  <!--  SEO & Social Meta Tags -->
+<title>Батутный центр №1 — прыжки, веселье и море эмоций! 🎉</title>
+<meta name="description" content="Батутный центр №1 — место, где взрослые и дети получают заряд энергии и хорошего настроения! Батуты, фитнес, дни рождения и веселье без границ. Прыгай выше с нами! 💫">
+<meta name="keywords" content="батутный центр, батуты, батутный парк, детский отдых, дни рождения, развлечения, фитнес, активный отдых, батутный зал, прыжки на батутах">
+<meta name="author" content="Батутный центр №1">
+<meta name="robots" content="index, follow">
+
+<!-- 📱 Open Graph (для Telegram, VK, Facebook) -->
+<meta property="og:title" content="Батутный центр №1 — веселье для всей семьи! 🎈">
+<meta property="og:description" content="Прыгайте, улыбайтесь и отдыхайте всей семьёй! Батутный центр №1 — батуты, фитнес и праздники без границ.">
+<meta property="og:image" content="./images/favicon.png"> 
+<meta property="og:url" content="https://batutnyi1-dev.github.io">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+
+<!-- 📱 PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#00ffae">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+
+  <link rel="stylesheet" href="style.css?v=9">
+  <link rel="icon" type="image/png" href="images/favicon.png" sizes="512x512">
+<link rel="apple-touch-icon" href="images/favicon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#96ffa8">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+
+<!-- Для Apple устройств -->
+<link rel="apple-touch-icon" href="icons/icon-512.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Батут №1">
 </head>
 <body>
+<button id="scrollTopBtn" class="scroll-top-btn" aria-label="Наверх">
+  <img src="images/arrow-up.png" alt="Наверх" class="arrow-icon" />
+</button>
+<script>
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
 
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    scrollTopBtn.classList.add("show");
+  } else {
+    scrollTopBtn.classList.remove("show");
+  }
+});
+
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+</script>
 <!-- Прелоадер -->
-<div id="preloader">
-  <svg viewBox="0 0 240 240" height="240" width="240" class="loader">
-    <circle stroke-linecap="round" stroke-dashoffset="-330" stroke-dasharray="0 660" stroke-width="20" stroke="#000" fill="none" r="105" cy="120" cx="120" class="loader-ring loader-ring-a"></circle>
-    <circle stroke-linecap="round" stroke-dashoffset="-110" stroke-dasharray="0 220" stroke-width="20" stroke="#000" fill="none" r="35" cy="120" cx="120" class="loader-ring loader-ring-b"></circle>
-    <circle stroke-linecap="round" stroke-dasharray="0 440" stroke-width="20" stroke="#000" fill="none" r="70" cy="120" cx="85" class="loader-ring loader-ring-c"></circle>
-    <circle stroke-linecap="round" stroke-dasharray="0 440" stroke-width="20" stroke="#000" fill="none" r="70" cy="120" cx="155" class="loader-ring loader-ring-d"></circle>
+<div id="preloader" style="
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(120deg, #FFE3BE, #FFD4A3, #FFF0D8);
+animation: gradientMove 6s ease-in-out infinite alternate;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+">
+<style>
+@keyframes gradientMove {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+</style>
+  <svg viewBox="0 0 240 240" height="180" width="180" class="loader" style="margin-bottom: 60px;">
+    <circle stroke-linecap="round" stroke-dashoffset="-330" stroke-dasharray="0 660" stroke-width="20" stroke="#00ff9c" fill="none" r="105" cy="120" cx="120" class="loader-ring loader-ring-a"></circle>
+    <circle stroke-linecap="round" stroke-dashoffset="-110" stroke-dasharray="0 220" stroke-width="20" stroke="#00ff9c" fill="none" r="35" cy="120" cx="120" class="loader-ring loader-ring-b"></circle>
+    <circle stroke-linecap="round" stroke-dasharray="0 440" stroke-width="20" stroke="#00ff9c" fill="none" r="70" cy="120" cx="85" class="loader-ring loader-ring-c"></circle>
+    <circle stroke-linecap="round" stroke-dasharray="0 440" stroke-width="20" stroke="#00ff9c" fill="none" r="70" cy="120" cx="155" class="loader-ring loader-ring-d"></circle>
   </svg>
+
+  <!-- Рандомная фраза под SVG -->
+  <p id="preloader-text" style="
+    font-family: 'font', sans-serif;
+    color: #8d8f8d;
+    font-size: 1.2rem;
+    margin-top: -20px;
+    text-align: center;
+    max-width: 90%;
+    line-height: 1.4;
+    animation: fadeIn 1s ease-in-out;
+  "></p>
 </div>
 
   <!-- ===== ШАПКА ===== -->
-  <header class="site-header">
-    <div class="container header-container">
-      
-      <h1 class="logo">Батутный №1</h1>
-      
-      <nav class="main-nav">
-        <a href="#about">О нас</a>
-        <a href="#price">Прайс-лист</a>
-        <a href="#abonements">Абонементы</a>
-        <a href="#contacts">Контакты</a>
-      </nav>
+<header class="site-header">
+  <div class="container header-container">
 
-<button id="callbackBtn">
-  Обратный звонок
-  <div class="star-1">
+    <a  class="logo">
+      <img src="images/logo.png" alt="Батутный центр №1">
+    </a>
+
+    <!-- Бургер -->
+    <div class="burger-menu" id="burgerMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Навигация -->
+    <nav class="main-nav" id="mainNav">
+      <a href="#about">О нас</a>
+      <a href="#price">Прайс-лист</a>
+      <a href="#abonements">Абонементы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+
+    <button id="callbackBtn" class="hero-block__btn">
+      Обратный звонок
+    </button>
+
+  </div>
+</header>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const burger = document.getElementById('burgerMenu');
+  const nav = document.getElementById('mainNav');
+  const links = nav?.querySelectorAll('a');
+
+  // Проверка, чтобы не было ошибок, если элементов нет
+  if (!burger || !nav) return;
+
+  // Открытие/закрытие меню при клике на бургер
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    nav.classList.toggle('show');
+    document.body.classList.toggle('no-scroll'); // чтобы не скроллился фон
+  });
+
+  // Закрытие меню при клике на ссылку
+  links?.forEach(link => {
+    link.addEventListener('click', () => {
+      burger.classList.remove('active');
+      nav.classList.remove('show');
+      document.body.classList.remove('no-scroll');
+    });
+  });
+
+  // Автоматическое закрытие при изменении ширины окна
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      burger.classList.remove('active');
+      nav.classList.remove('show');
+      document.body.classList.remove('no-scroll');
+    }
+  });
+});
+</script>
+
+
+  <!-- ===== ГЛАВНЫЙ КОНТЕНТ ===== -->
+  <main>
+
+
+
+    <!-- ===== О нас ===== -->
+
+    <section class="hero-block">
+  <div class="hero-block__container">
+    <h1 class="hero-block__title" style="font-family: 'one'; font-width: 500;">Батутный центр №1</h1>
+    <p class="hero-block__subtitle">
+      Прыгай выше — живи ярче  
+      <span>Здесь начинается твой полёт!</span>
+    </p>
+
+    <div class="hero-block__actions">
+      <!-- Твоя кастомная кнопка -->
+     <button id="requestBtn" class="hero-block__btn">
+      Заказать звонок
+      <div class="star-1">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xml:space="preserve"
@@ -147,98 +304,207 @@
       </g>
     </svg>
   </div>
-</button>
+     </button>
+
+
+      <!-- Вторая кнопка -->
+      <a href="#about" class="hero-block__btn hero-block__btn--alt" >Подробнее</a>
+    </div>
+  </div>
+</section>
+
+    <!-- О НАС -->
+<section class="about-block" id="about">
+  <div class="about-block__container">
+    <h2 class="about-block__title">О нас</h2>
+    <h3 class="about-block__subtitle">Земля — это скучно. Время оторваться! </h3>
+
+    <p class="about-block__text">
+      Батутный центр №1 — ваша официальная точка отрыва от реальности 
+    </p>
+    <p class="about-block__text">
+      <strong>Арсенал полёта :</strong> 17 батутов, 3 прочных трюкача и поролоновая бездна для приземления мечты 
+    </p>
+    <p class="about-block__text">
+      <strong>Зоны броска:</strong> забей сверху или исчезни в лабиринте — детский восторг без границ
+    </p>
+    <p class="about-block__text">
+      <strong>Чистый драйв:</strong> адреналин в чистом виде. Без примесей и компромиссов
+    </p>
+  </div>
+</section>
+
+<!-- фото -->
+
+
+<section id="gallery" class="photo-gallery">
+  <h2 class="gallery-title">Фотоальбом</h2>
+  <p class="about-block__text" style="color:#50565d; font-family: 'Unbounded';
+  font-weight: 600;">
+      Улыбки, прыжки и эмоции — всё о нас!<br>
+      Так отдыхают наши гости! 
+    </p>
+  <div class="gallery-grid">
+    <img src="./gallery/1.png" alt="Фото 1" class="gallery-item">
+    <img src="./gallery/7.png" alt="Фото 2" class="gallery-item">
+    <img src="./gallery/3.png" alt="Фото 3" class="gallery-item">
+
+    <img src="./gallery/5.png" alt="Фото 5" class="gallery-item">
+    <img src="./gallery/6.png" alt="Фото 6" class="gallery-item">
+    <img src="./gallery/2.png" alt="Фото 7" class="gallery-item">
+  </div>
+
+  <!-- Модальное окно (лайтбокс) -->
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="Просмотр фото">
+  </div>
+</section>
+
+<script>
+// Лайтбокс для просмотра фото
+const galleryItems = document.querySelectorAll('.gallery-item');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
+
+galleryItems.forEach(item => {
+  item.addEventListener('click', () => {
+    lightbox.style.display = 'flex';
+    lightboxImg.src = item.src;
+  });
+});
+
+lightbox.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+
+</script>
+    <!-- ПРАЙС-ЛИСТ -->
+<section class="cost-block" id="price">
+  <h2 class="cost-block__title">Прайс-лист</h2>
+<span class="desc-price">*Прайс буднего дня действует с понедельника по пятницу до 17:00. 
+<br>С пятницы с 17:00 - прайс выходного дня.</span>
+  <div class="cost-block__accordion">
+
+    <!-- Аккордеон 1 -->
+    <div class="cost-block__item">
+      <div class="cost-block__header">
+        <span class="cost-block__icon">➕</span>
+        <span>Батуты — Будни</span>
+      </div>
+      <div class="cost-block__content">
+        <p><strong>1 час — 500 руб</strong></p>
+        <p>30 мин — 350 руб</p>
+        <p>15 мин — 250 руб</p>
+        <p>«Безлимитище!» — 750 руб</p>
+        <small>*нет ограничений по времени в течение дня</small>
+        <span class="note-text">*Подробная информация у наших сотрудников.</span>
+      </div>
+    </div>
+
+    <!-- Аккордеон 2 -->
+    <div class="cost-block__item">
+      <div class="cost-block__header">
+        <span class="cost-block__icon">➕</span>
+        <span>Батуты — Выходные</span>
+      </div>
+      <div class="cost-block__content">
+        <p><strong>1 час — 600 руб</strong></p>
+        <p>30 мин — 450 руб</p>
+        <p>15 мин — 300 руб</p>
+        <p>«Безлимитище!» — 850 руб (не более 3 часов)</p>
+      <span class="note-text">*Подробная информация у наших сотрудников.</span>
+      </div>
 
     </div>
-  </header>
 
-  <!-- ===== ГЛАВНЫЙ КОНТЕНТ ===== -->
-  <main>
-    <!-- О НАС -->
-    <section id="about" class="section light">
-      <div class="container">
-<div class="info-block">
-  <h1 class="main-title">Земля — это скучно.<br>Время оторваться!</h1>
-        
-        <p class="subtitle">Батутный центр №1 — ваша официальная точка отрыва от реальности</p>
-        
-        <div class="features-grid">
-            <div class="feature-card">
-                <h3 class="feature-title">Арсенал полёта</h3>
-                <p class="feature-description">17 батутов, 3 прочных трюкача, поролоновая бездна для приземления мечты</p>
-            </div>
-            
-            <div class="feature-card">
-                <h3 class="feature-title">Зоны броска</h3>
-                <p class="feature-description">Забей сверху или исчезни в лабиринте — детский восторг без границ</p>
-            </div>
-            
-            <div class="feature-card">
-                <h3 class="feature-title">Чистый драйв</h3>
-                <p class="feature-description">Адреналин в чистом виде. Без примесей и компромиссов</p>
-            </div>
-        </div>
-        
-        
+    <!-- Аккордеон 3 -->
+<div class="cost-block__item">
+  <div class="cost-block__header">
+    <span class="cost-block__icon">➕</span>
+    <span>Аренда зала</span>
+  </div>
+  <div class="cost-block__content">
+    <p style="margin-bottom: -30px;">
+      Будни <span style="color:#8f8f8f; font-weight:100; white-space:nowrap;">(пн-пт до 17:00)</span>
+    </p><br>
+    <p>4 000 руб/час <span style="color:#8f8f8f; font-weight:100; white-space:nowrap;">(до 10 человек)</span></p>
+    <p>5 000 руб/час <span style="color:#8f8f8f; font-weight:100; white-space:nowrap;">(до 25 человек)</span></p>
+    <p style="margin-bottom: -30px;">
+      Выходные <span style="color:#8f8f8f; font-weight:100; white-space:nowrap;">(пт с 17:00)</span>
+    </p><br>
+    <p>6 000 руб/час <span style="color:#8f8f8f; font-weight:100;">(Аренда зоны до 10 человек)</span></p>
+    <p>8 000 руб/час <span style="color:#8f8f8f; font-weight:100;">(10:00–12:00 / 19:00–22:00)</span></p>
+    <p>12 000 руб/час <span style="color:#8f8f8f; font-weight:100;">(12:00–19:00)</span></p>
+    <p>Инструктор на День рождения — 1000 руб/час</p>
+    <p>Фотозона, шарики, праздничный стол — до 25 человек</p>
+
+    
+    <button class="gallery-btn">Посмотреть галерею</button><br>
+
+    <span class="note-text">*Подробная информация у наших сотрудников.</span>
+  </div>
 </div>
 
-      </div>
-    </section>
 
-    <!-- ПРАЙС-ЛИСТ -->
-    <section id="price" class="section dark">
-      <div class="container">
-        <h2>Прайс-лист</h2>
-        <div class="price-grid">
-          <div class="price-block">
-            <h3>Будни</h3>
-            <ul>
-              <li>1 час — 400 руб</li>
-              <li>30 мин — 250 руб</li>
-              <li>15 мин — 150 руб</li>
-              <li>«Безлимитище!» — 600 руб<br><small>Нет ограничений по выходам и времени</small></li>
-            </ul>
-          </div>
-          <div class="price-block">
-            <h3>Выходные</h3>
-            <ul>
-              <li>1 час — 550 руб</li>
-              <li>30 мин — 350 руб</li>
-              <li>15 мин — 250 руб</li>
-              <li>«Безлимитище!» — 750 руб<br><small>До 3 часов, можно выходить</small></li>
-              <li><small>Тариф выходного дня с пятницы 17:00</small></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- АБОНЕМЕНТЫ -->
-    <section id="abonements" class="section accent">
-      <div class="container">
-        <h2 style="color: #FFFFFF;">Абонементы</h2>
-        <div class="abonement-cards">
-          <div class="abonement">
-            <h3>Безлимит</h3>
-            <p class="price">5 000 руб/мес</p>
-            <p>Включая выходные</p>
-          </div>
-          <div class="abonement">
-            <h3>Персональный тренер</h3>
-            <p>Индивидуальная тренировка</p>
-            <p class="price">1 000 руб/час</p>
-            <p>Абонемент на 8 занятий — <br><strong>6 000 руб/мес</strong></p>
-          </div>
-          <div class="abonement">
-            <h3>Фитнес на батутах</h3>
-            <p>Групповые тренировки (8 занятий)</p>
-            <p class="price">3 000 руб/мес</p>
-            <p><small>Группа до 13 человек</small></p>
-          </div>
-        </div>
-        <button id="requestBtn" class="btn btn-light">Оставить заявку</button>
+
+    <!-- Аккордеон 4 -->
+    <div class="cost-block__item">
+      <div class="cost-block__header">
+        <span class="cost-block__icon">➕</span>
+        <span>Персональная тренировка</span>
       </div>
-    </section>
+      <div class="cost-block__content">
+        <p>1 чел — 1500 руб/час</p>
+        <p>2 чел — 2000 руб/час</p>
+        <p>3 чел — 3500 руб/час</p>
+        
+        <span class="note-text">*Подробная информация у наших сотрудников.</span>
+      </div>
+    </div>
+    <div class="cost-block__item">
+      <div class="cost-block__header">
+        <span class="cost-block__icon">➕</span>
+        <span>«Выгодно для всех!»</span>
+      </div>
+      <div class="cost-block__content">
+        <p>В День рождения имениннику вход бесплатно на весь день! <span class="note-text"> *При предъявлении подтверждающего документа.</span></p>
+        <p>Студентам скидка 50 рублей.<span class="note-text"> *При предъявлении действующего студенческого билета. </span></p>
+        <span class="note-text">*Подробная информация у наших сотрудников.</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- СЕКЦИЯ: Абонементы и тренировки -->
+<section class="train-plan" id="abonements">
+  <h2 class="cost-block__title">Абонементы</h2>
+
+  <div class="train-plan__item">
+    <div class="train-plan__header">
+      <span class="train-plan__icon">➕</span>
+      <p>Безлимит</p>
+    </div>
+    <div class="train-plan__content">
+      <p class="train-plan__price">7 000 руб/мес</p>
+      <p class="train-plan__desc">Включая выходные</p>
+      <span class="note-text">*Подробная информация у наших сотрудников.</span>
+    </div>
+  </div>
+
+  <div class="train-plan__item">
+    <div class="train-plan__header">
+      <span class="train-plan__icon">➕</span>
+      <p>Персональный тренер</p>
+    </div>
+    <div class="train-plan__content">
+      <p><span style="color: white;"></span><strong> Индивидуальная тренировка</strong><br>1 500 руб/час</p>
+      <p><span style="color: white;"></span><strong> Абонемент на 8 занятий</strong><br>8 000 руб/мес</p>
+      <span class="note-text">*Подробная информация у наших сотрудников.</span>
+    </div>
+  </div>
+</section>
 
 <section class="rules-section">
   <h2 class="section-title"><strong>Правила посещения центра</strong></h2>
@@ -256,12 +522,12 @@
       <div class="rules-content" id="rules-content">
         <p><strong>Во время прыжков на батуте рекомендуем вам руководствоваться несколькими простыми правилами поведения:</strong></p>
         <ul>
-          <li>🌟Один человек – один батут! Запрещается прыгать на одном батуте более чем одному человеку.</li>
-          <li>🌟Дети до 7-ти лет могут прыгать только в сопровождении родителей или свободного инструктора. Возраст ребёнка подтверждается документально или на усмотрение администратора.</li>
-          <li>🌟Дети до 18 лет должны иметь при себе письменное согласие от родителей (в случае, если приходят одни).</li>
-          <li>🌟Вход в батутный центр строго в бахилах.</li>
-          <li>🌟Вход в батутную зону только в спортивной одежде и специальных носках (можно приобрести у администратора).</li>
-          <li>🌟Вход на батут разрешается после организованной разминки с тренером!</li>
+          <li>Один человек – один батут! Запрещается прыгать на одном батуте более чем одному человеку.</li>
+          <li>Дети до 7-ти лет могут прыгать только в сопровождении родителей или свободного инструктора. Возраст ребёнка подтверждается документально или на усмотрение администратора.</li>
+          <li>Дети до 18 лет должны иметь при себе письменное согласие от родителей (в случае, если приходят одни).</li>
+          <li>Вход в батутный центр строго в бахилах.</li>
+          <li>Вход в батутную зону только в спортивной одежде и специальных носках (можно приобрести у администратора).</li>
+          <li>Вход на батут разрешается после организованной разминки с тренером!</li>
         </ul>
       </div>
     </div>
@@ -282,74 +548,113 @@
     <div class="rules-content" id="safety-content">
      
       <ul>
-        <li>❓<strong>«А что, взрослым тоже можно прыгать?»</strong><br>
-💡Нужно! В нашем батутном центре каждое полотно очень прочное и выдержит вес прилично больше, чем, скажем, 100 кг!</li>
-        <li>❓<strong>«А у Вас можно поесть и попить?»</strong><br>
+        <li><strong>«А что, взрослым тоже можно прыгать?»</strong><br>
+Нужно! В нашем батутном центре каждое полотно очень прочное и выдержит вес прилично больше, чем, скажем, 100 кг!</li>
+        <li><strong>«А у Вас можно поесть и попить?»</strong><br>
 
-💡По правилам посещения нельзя проносить еду и напитки на арену, но на территории батутного центра подкрепиться можно! Также в ТЦ есть зона фудкорта, где можно расположиться более удобно.</li>
-        <li>❓<strong>«А почему прыгать можно только в носках?»</strong><br>
+Еда и напитки на территории батутного центра запрещены, можно только бутилированную воду и другие напитки, но с ними так же на арену подниматься запрещено.</li>
+        <li><strong>«А почему прыгать можно только в носках?»</strong><br>
 
-💡По санитарным нормам. Чтобы оборудование не изнашивалось, всё было чистым и никто ничем не заболел, прыгать без носков — запрещено!</li>
-        <li>❓<strong>«С какого возраста можно детям?»</strong><br>
+По санитарным нормам. Чтобы оборудование не изнашивалось, всё было чистым и никто ничем не заболел, прыгать без носков — запрещено!</li>
+        <li><strong>«С какого возраста можно детям?»</strong><br>
 
-💡Для сааамых маленьких гостей у нас есть детский лабиринт с сухим бассейном. Если ваш малыш уже понимает, что такое батут и как прыгать — милости просим! Главное условие — вход на арену, только в сопровождении взрослого!</li>
-        <li>❓<strong>«Вы проводите дни рождения?»</strong><br>
+Для с-а-а-амых маленьких гостей у нас есть детский лабиринт с сухим бассейном. Если ваш малыш уже понимает, что такое батут и как прыгать — милости просим! Главное условие — вход на арену, только в сопровождении взрослого!</li>
+        <li><strong>«Вы проводите дни рождения?»</strong><br>
 
-💡Да!! А еще: персональные тренировки, фитнес на батутах и много всего интересного!</li>
-        <li>❓<strong>«Можно рассчитываться банковской картой?»</strong><br>
+Да!! А еще: персональные тренировки на батутах и много всего интересного!</li>
+        <li><strong>«Можно рассчитываться банковской картой?»</strong><br>
 
-💡Конечно же можно!</li>
+Конечно же можно!</li>
       </ul>
     </div>
   </div>
 </div>
+
+<script>
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+// Показ/скрытие кнопки при прокрутке
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    scrollTopBtn.classList.add('show');
+  } else {
+    scrollTopBtn.classList.remove('show');
+  }
+});
+
+// Плавная прокрутка вверх
+scrollTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+</script>
   
   <!-- Документы -->
   <h2 class="section-title">Документы для посещения</h2>
 
   <div class="documents">
-    <a href="docs/soglasie.pdf" class="doc-link" data-pdf="docs/soglasie.pdf">
-  <span class="icon">📄</span> Согласие посетителя
-</a>
-    <a href="docs/pravila.pdf" class="doc-link" data-pdf="docs/pravila.pdf">
-      <span class="icon">📄</span> Правила посещения
-    </a>
-    <a href="docs/oferta.pdf" class="doc-link" data-pdf="docs/oferta.pdf">
-      <span class="icon">📄</span> Публичная оферта
-    </a>
-  </div>
-
-  <!-- Модальное окно PDF -->
-
-<!-- Просмотр PDF-документов -->
-<div id="pdfViewerBack" class="modal-backdrop-pdf">
-  <div class="modal-window-pdf">
-    <button class="close-btn-pdf" aria-label="Закрыть окно">×</button>
-    <iframe id="pdfFrameBack" src="" frameborder="0"></iframe>
-  </div>
+  <a href="docs/soglasie.pdf" target="_blank" download class="doc-link">
+    <span class="icon">📄</span> Согласие посетителя
+  </a>
+  <a href="docs/pravila.pdf" target="_blank" download class="doc-link">
+    <span class="icon">📄</span> Правила посещения
+  </a>
+  <a href="docs/oferta.pdf" target="_blank" download class="doc-link">
+    <span class="icon">📄</span> Публичная оферта
+  </a>
 </div>
+
+
+
 
 
 </section>
 
     <!-- КОНТАКТЫ -->
-<section class="contacts">
+<section class="contacts" id="contacts">
   <div class="contacts-info">
     <h2>Контакты</h2>
 
     <div class="contact-item">
-      <img src="images/email.png" style="width: 36px; height: 36px; margin-bottom: 15px;">
+      <img src="./images/geo.png" style="width: 36px; height: 36px; margin-bottom: 15px;">
       <i class="icon location"></i>
       <div>
         <h3>Торговый центр "Обними", 2 этаж</h3>
-        <p>г. Обнинск, ул. Курчатова, 55.</p>
+        <p style="color: #96ffa8;"><a href="#" id="openMapLink">г. Обнинск, ул. Курчатова, 55.</a></p>
+        <script>
+document.getElementById("openMapLink").addEventListener("click", function(e) {
+  e.preventDefault(); // отменяем переход по ссылке
+
+  const address = "Обнинск, ул. Курчатова д.55";
+  const coords = "55.121448, 36.627315"; // координаты 
+
+  // Проверяем, мобильное устройство или нет
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+if (isMobile) {
+    //  Пытаемся открыть Яндекс.Карты в приложении
+    window.location.href = `yandexmaps://maps.yandex.ru/?pt=${coords}&z=16&text=${encodeURIComponent(address)}`;
+
+    //  Если приложение не установлено — открываем браузерную версию
+    setTimeout(() => {
+      window.open(`https://yandex.ru/maps/?text=${encodeURIComponent(address)}`, '_blank');
+    }, 1000);
+  } else {
+    //  На ПК просто открываем в браузере
+    window.open(`https://yandex.ru/maps/?text=${encodeURIComponent(address)}`, '_blank');
+  }
+});
+</script>
       </div>
     </div>
 
     <div class="contact-item">
-      <img src="images/geo.png" style="width: 36px; height: 36px;">
+      <img src="images/email.png" style="width: 36px; height: 36px;">
       <i class="icon email"></i>
-      <p>E-mail: <a href="mailto:info@batutn1obninsk.ru">info@batutn1obninsk.ru</a></p>
+      <p style="color: #796744;">E-mail: <a href="mailto:info@batutn1obninsk.ru">info@batutn1obninsk.ru</a></p>
     </div>
 
 <div class="contact-item">
@@ -358,15 +663,17 @@
         <img src="images/phone.png" style="width: 36px; height: 36px;">
       </div>
       <div>
-        <p>Телефон: <strong>8 (800) 234-2409</strong></p>
-        <p>Телефон: <strong>8 (980) 713-1385</strong></p>
+        <p style="color: #796744;">Телефон: <strong><a href="tel:8 (800) 234-2409">8 (800) 234-2409</a></strong></p>
+        <p style="color: #796744;">Телефон: <strong><a href="tel:8 (800) 234-2409">8 (980) 713-1385</a></strong></p>
       </div>
     </div>
 
     <div class="socials">
       <p>Мы в соц сетях:</p>
-      <a href="#" class="vk"><img src="images/vk-logo.svg" alt="VK"></a>
-      <a href="#" class="insta"><img src="images/instagram.svg" alt="Instagram"></a>
+      <a href="https://vk.com/batutn1obninsk" target="_blank" rel="noopener noreferrer" class="vk"><img src="images/vk-logo.svg" alt="VK"></a>
+      <a href="https://www.instagram.com/batutn1obninsk/" target="_blank" rel="noopener noreferrer" class="insta"><img src="images/instagram.svg" alt="Instagram"></a>
+      <a href="https://t.me/batutn1obninsk" target="_blank" rel="noopener noreferrer" class="insta"><img src="images/telegram.svg" alt="Telegram"></a>
+      
     </div>
   </div>
 
@@ -381,25 +688,87 @@
 
   <!-- ===== ПОДВАЛ ===== -->
   <footer class="site-footer">
-    <p>© 2025 Батутный №1</p>
+    <p>© 2025 Батутный №1. Все права защищены.</p>
   </footer>
 
 <!-- ===== МОДАЛЬНОЕ ОКНО С ФОРМОЙ ===== -->
 <div id="modalForm" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
-    <h2>Оставьте заявку</h2>
+    <h2 style="color: #1db2b3;">Оставьте заявку</h2>
 
     <form id="feedbackForm">
-      <input type="text" name="name" placeholder="😉Ваше имя" required>
-      <input type="tel" name="phone" placeholder="📞+7-(000) 000-00-00" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+      <input type="text" name="name" placeholder="Ваше имя" required>
+      <input type="tel" id="phoneInput" name="phone" placeholder=" +7 (___) ___-__-__" required>
+
 
       <button type="submit" class="button-name" role="button"><b>Отправить</button>
 
     </form>
+    <script>
+// --- Отправка формы через Web3Forms ---
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("feedbackForm");
+  const formMessage = document.getElementById("formMessage");
 
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData();
+    formData.append("access_key", "c601b50b-3647-4a3e-bc45-38c284f4f5f1");
+    formData.append("name", form.name.value);
+    formData.append("phone", form.phone.value);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        formMessage.style.display = "block";
+        form.reset();
+      } else {
+        alert("Ошибка при отправке. Попробуйте снова.");
+      }
+    } catch (error) {
+      alert("Ошибка сети. Попробуйте позже.");
+      console.error(error);
+    }
+  });
+});
+</script>
+<script>
+  // === Маска ввода телефона ===
+const phoneInput = document.getElementById('phoneInput');
+
+phoneInput.addEventListener('input', function (e) {
+  let x = e.target.value.replace(/\D/g, ''); // убираем всё, кроме цифр
+  if (x.startsWith('8')) x = '7' + x.slice(1); // заменяем 8 на 7
+
+  let formatted = '+7';
+  if (x.length > 1) formatted += ' (' + x.substring(1, 4);
+  if (x.length >= 5) formatted += ') ' + x.substring(4, 7);
+  if (x.length >= 8) formatted += '-' + x.substring(7, 9);
+  if (x.length >= 10) formatted += '-' + x.substring(9, 11);
+
+  e.target.value = formatted;
+});
+
+// Проверка валидности
+phoneInput.addEventListener('blur', () => {
+  const digits = phoneInput.value.replace(/\D/g, '');
+  if (digits.length !== 11 || !digits.startsWith('7')) {
+    phoneInput.setCustomValidity('Введите корректный российский номер телефона');
+  } else {
+    phoneInput.setCustomValidity('');
+  }
+});
+
+</script>
     <p id="formMessage" style="color: #4f4f4f; display: none; margin-top: 10px; text-shadow: 1px 2px 4px grey;">
-      <strong>📝Ваша заявка успешно отправлена! <br>В ближайшее время мы с Вами свяжемся.📲</strong>
+      <strong style="font-family: 'one';">📝Ваша заявка успешно отправлена! <br>В ближайшее время мы с Вами свяжемся.📲</strong>
     </p>
   </div>
 </div>
@@ -409,24 +778,73 @@
   <script src="script.js"></script>
 
 <script>
+  // Массив фраз, которые будут показываться случайно
+  const preloaderPhrases = [
+    "Подготавливаем батуты к взлёту ",
+    "Разогреваем атмосферу для прыжков ",
+    "Заряжаем энергию на максимум ",
+    "Настраиваем идеальную упругость ",
+    "Ваш полёт начинается через мгновение ",
+    "Готовьтесь к прыжку мечты "
+  ];
+
+  // Получаем случайную фразу
+  const randomPhrase = preloaderPhrases[Math.floor(Math.random() * preloaderPhrases.length)];
+  document.getElementById("preloader-text").textContent = randomPhrase;
+
+  // Убираем прелоадер после загрузки страницы
   window.addEventListener("load", () => {
     const preloader = document.getElementById("preloader");
-    preloader.classList.add("preloader-hidden");
-    setTimeout(() => preloader.style.display = "none", 2000);
+    setTimeout(() => {
+      preloader.classList.add("preloader-hidden");
+      setTimeout(() => preloader.style.display = "none", 1500);
+    }, 1000); // ← время, прежде чем начнётся исчезновение (в мс)
   });
 </script>
 
-<script>
-  // Плавное открытие/закрытие правил
-  const toggle = document.getElementById("rules-toggle");
-  const content = document.getElementById("rules-content");
-  const icon = toggle.querySelector(".icon");
+<style>
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-  toggle.addEventListener("click", () => {
-    const isOpen = content.classList.toggle("open");
-    icon.style.transform = isOpen ? "rotate(45deg)" : "rotate(0deg)";
+/* плавное исчезновение прелоадера */
+.preloader-hidden {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+</style>
+
+<script>
+// Если навигация прокручивает вниз (через якоря)
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', () => {
+    setTimeout(() => scrollTopBtn.classList.add('show'), 300);
   });
-  // Второй аккордеон (без конфликтов)
+});
+
+// Аккордеоны в блоке тренировок
+document.querySelectorAll('.train-plan__header').forEach(header => {
+  header.addEventListener('click', () => {
+    const item = header.parentElement;
+    const content = item.querySelector('.train-plan__content');
+    const icon = header.querySelector('.train-plan__icon');
+    const isOpen = content.classList.toggle('open');
+    icon.style.transform = isOpen ? 'rotate(45deg)' : 'rotate(0deg)';
+  });
+});
+
+// Первый аккордеон — Правила
+const toggle = document.getElementById("rules-toggle");
+const content = document.getElementById("rules-content");
+const icon = toggle.querySelector(".icon");
+
+toggle.addEventListener("click", () => {
+  const isOpen = content.classList.toggle("open");
+  icon.style.transform = isOpen ? "rotate(45deg)" : "rotate(0deg)";
+});
+
+// Второй аккордеон — FAQ
 const safetyToggle = document.getElementById("safety-toggle");
 const safetyContent = document.getElementById("safety-content");
 const safetyIcon = safetyToggle.querySelector(".icon");
@@ -436,45 +854,189 @@ safetyToggle.addEventListener("click", () => {
   safetyIcon.style.transform = isOpen ? "rotate(45deg)" : "rotate(0deg)";
 });
 
-/* === pdf === */
-document.addEventListener("DOMContentLoaded", () => {
-  const pdfBackdrop = document.getElementById("pdfViewerBack");
-  const pdfFrame = document.getElementById("pdfFrameBack");
-  const pdfClose = document.querySelector(".close-btn-pdf");
-  const pdfLinks = document.querySelectorAll(".doc-link");
+// ===== Скачивание файлов (универсально для всех устройств) =====
+document.querySelectorAll('.doc-link, .download-link').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const url = link.getAttribute('href');
+    if (!url) return;
 
-  // Открытие модалки
-  pdfLinks.forEach(link => {
-    link.addEventListener("click", e => {
-      e.preventDefault();
-      const file = link.getAttribute("data-pdf");
-      pdfFrame.src = file;
-      pdfBackdrop.style.display = "flex";
-    });
-  });
+    const fileName = url.split('/').pop();
 
-  // Закрытие кнопкой
-  pdfClose.addEventListener("click", () => {
-    pdfBackdrop.style.display = "none";
-    pdfFrame.src = "";
-  });
 
-  // Закрытие кликом по фону
-  pdfBackdrop.addEventListener("click", e => {
-    if (e.target === pdfBackdrop) {
-      pdfBackdrop.style.display = "none";
-      pdfFrame.src = "";
+
+    // Подтверждение
+    const confirmed = confirm(`📄 Файл "${fileName}" начнёт скачиваться. Продолжить?`);
+
+    if (confirmed) {
+      const a = document.createElement('a');
+      a.href = url;
+      a.setAttribute('download', fileName);
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    } else {
+      localStorage.setItem(`declined_${fileName}`, 'true');
+      alert(`🚫 Загрузка файла "${fileName}" отменена.`);
     }
   });
 });
 
+// ==== Аккордеон для блока стоимости ====
+document.addEventListener('DOMContentLoaded', () => {
+  const accordions = document.querySelectorAll('.cost-block__item');
+  accordions.forEach(acc => {
+    const header = acc.querySelector('.cost-block__header');
+    const content = acc.querySelector('.cost-block__content');
+    const icon = acc.querySelector('.cost-block__icon');
 
+    if (header && content) {
+      header.addEventListener('click', () => {
+        const isOpen = content.classList.toggle('open');
+        icon.style.transform = isOpen ? 'rotate(45deg)' : 'rotate(0deg)';
+      });
+    }
+  });
+});
 </script>
 
 
 
 
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("service-worker.js")
+      .then(() => console.log("✅ Service Worker зарегистрирован"))
+      .catch((err) => console.log("❌ Ошибка регистрации SW:", err));
+  });
+}
+</script>
+<!-- МОДАЛКА -->
+<div id="galleryModal" class="gallery-modal">
+  <div class="gallery-modal__overlay">
+    <div class="gallery-modal__content">
+      <span class="gallery-modal__close">&times;</span>
+      <button class="gallery-modal__arrow gallery-modal__arrow--prev">❮</button>
+      <div class="gallery-modal__track">
+        <div class="gallery-modal__item"><img src="./img/photo1.jpg" alt=""></div>
+        <div class="gallery-modal__item"><video src="./video/video1.MP4" controls></video></div>
+        <div class="gallery-modal__item"><img src="./img/photo2.jpg" alt=""></div>
+        <div class="gallery-modal__item"><video src="./video/video2.MP4" controls></video></div>
+        <div class="gallery-modal__item"><img src="./img/photo3.jpg" alt=""></div>
+        <div class="gallery-modal__item"><img src="./img/photo4.jpg" alt=""></div>
+        <div class="gallery-modal__item"><img src="./img/photo5.jpg" alt=""></div>
+        <div class="gallery-modal__item"><video src="./video/video3.MP4" controls></video></div>
+      </div>
+      <button class="gallery-modal__arrow gallery-modal__arrow--next">❯</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  const galleryModal = document.getElementById('galleryModal');
+  const overlay = galleryModal.querySelector('.gallery-modal__overlay');
+  const closeBtn = galleryModal.querySelector('.gallery-modal__close');
+  const prevBtn = galleryModal.querySelector('.gallery-modal__arrow--prev');
+  const nextBtn = galleryModal.querySelector('.gallery-modal__arrow--next');
+  const track = galleryModal.querySelector('.gallery-modal__track');
+  const items = galleryModal.querySelectorAll('.gallery-modal__item');
+  const videos = galleryModal.querySelectorAll('video');
+  const openBtns = document.querySelectorAll('.gallery-btn');
+  let index = 0;
+
+  function openModal() {
+    galleryModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    updateSlide();
+  }
+
+  function closeModal() {
+    galleryModal.classList.remove('active');
+    document.body.style.overflow = '';
+    videos.forEach(v => v.pause());
+  }
+
+  function updateSlide() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  function nextSlide() {
+    index = (index + 1) % items.length;
+    updateSlide();
+  }
+
+  function prevSlide() {
+    index = (index - 1 + items.length) % items.length;
+    updateSlide();
+  }
+
+  openBtns.forEach(btn => btn.addEventListener('click', openModal));
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closeModal();
+  });
+  nextBtn.addEventListener('click', nextSlide);
+  prevBtn.addEventListener('click', prevSlide);
+
+  document.addEventListener('keydown', (e) => {
+    if (!galleryModal.classList.contains('active')) return;
+    if (e.key === 'Escape') closeModal();
+    if (e.key === 'ArrowRight') nextSlide();
+    if (e.key === 'ArrowLeft') prevSlide();
+  });
+
+  // === Поддержка свайпов на мобильных ===
+  let startX = 0;
+  let endX = 0;
+
+  track.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  }, { passive: true });
+
+  track.addEventListener('touchmove', (e) => {
+    endX = e.touches[0].clientX;
+  }, { passive: true });
+
+  track.addEventListener('touchend', () => {
+    const diff = endX - startX;
+    if (Math.abs(diff) > 50) {
+      if (diff < 0) nextSlide();
+      else prevSlide();
+    }
+    startX = 0;
+    endX = 0;
+  });
+
+  // === Автоматическое воспроизведение видео при видимости ===
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const video = entry.target;
+      if (entry.isIntersecting) {
+        video.play().catch(() => {}); // игнорируем ошибку автостарта
+      } else {
+        video.pause();
+      }
+    });
+  }, {
+    threshold: 0.6, // минимум 60% видимости
+    root: galleryModal.querySelector('.gallery-modal__track-wrapper') || null, // чтобы срабатывало при горизонтальной прокрутке
+  });
+
+  videos.forEach(video => {
+    video.controls = true; // включаем стандартные кнопки
+    video.playsInline = true;
+    video.muted = true; // автостарт разрешён только для беззвучных видео
+    observer.observe(video);
+  });
+
+})();
+</script>
+
+
 
 </body>
+
 </html>
 

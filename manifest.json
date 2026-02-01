@@ -1,0 +1,22 @@
+{
+  "name": "Батут №1",
+  "short_name": "Батут №1",
+  "description": "Батутный центр №1 — твоя официальная точка отрыва от реальности!",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#232323",
+  "theme_color": "#96ffa8",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
